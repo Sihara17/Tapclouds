@@ -1,19 +1,3 @@
-// Mock auth implementation
-export const auth = async () => {
-  return {
-    user: {
-      id: "1",
-      name: "Player",
-      email: "player@example.com",
-    },
-  }
-}
+import { auth as nextAuth } from "@/auth"
 
-export const handlers = {
-  GET: async () => {
-    return new Response("OK")
-  },
-  POST: async () => {
-    return new Response("OK")
-  },
-}
+export const auth = nextAuth
